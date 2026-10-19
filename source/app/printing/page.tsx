@@ -121,6 +121,20 @@ export default function PrintingPage() {
               </p>
             </div>
 
+            <div className="equipment-layout">
+              <figure className="equipment-photo equipment-photo-main">
+                <a href="/work/x1c-ams.webp" aria-label="View full photo: Bambu Lab X1 Carbon with AMS">
+                  <Image
+                    src="/work/x1c-ams.webp"
+                    alt="Bambu Lab X1 Carbon printer with an AMS multi-material unit mounted on top."
+                    width={900}
+                    height={1407}
+                    sizes="(max-width: 980px) 100vw, 420px"
+                  />
+                </a>
+                <figcaption>The X1 Carbon with its AMS on top.</figcaption>
+              </figure>
+
             <div className="spec-panel">
               <div className="spec-panel-title">
                 <span className="icon-box">
@@ -145,10 +159,31 @@ export default function PrintingPage() {
                   <dd>AMS printing, up to 12 colors per profile</dd>
                 </div>
                 <div>
+                  <dt>Filament handling</dt>
+                  <dd>AMS plus two AMS HT units with drying</dd>
+                </div>
+                <div>
                   <dt>Slicer</dt>
                   <dd>Bambu Studio</dd>
                 </div>
               </dl>
+            </div>
+
+              <figure className="equipment-photo">
+                <a href="/work/ams-ht.webp" aria-label="View full photo: two AMS HT units">
+                  <Image
+                    src="/work/ams-ht.webp"
+                    alt="Two Bambu Lab AMS HT units loaded with black and green filament, each showing humidity and temperature on its display."
+                    width={900}
+                    height={790}
+                    sizes="(max-width: 980px) 100vw, 640px"
+                  />
+                </a>
+                <figcaption>
+                  Two AMS HT units dry filament and feed it to the printer, with humidity and
+                  temperature on each display.
+                </figcaption>
+              </figure>
             </div>
           </div>
         </section>
