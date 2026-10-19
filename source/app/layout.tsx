@@ -69,6 +69,7 @@ const businessJsonLd = {
   description: siteDescription,
   email: "sebastien@ap3xoperations.com",
   founder: { "@type": "Person", name: "Sebastien Gifford" },
+  foundingDate: "2026-08-28",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Franklin",

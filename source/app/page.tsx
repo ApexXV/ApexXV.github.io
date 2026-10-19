@@ -9,8 +9,16 @@ import {
   Workflow,
 } from "lucide-react";
 import Image from "next/image";
+import { SiteFooter, SiteHeader, SkipLink, inquiryHref } from "./_components/site-chrome";
 
-const services = [
+const services: {
+  icon: typeof Workflow;
+  label: string;
+  title: string;
+  description: string;
+  outcomes: string[];
+  link?: { href: string; label: string };
+}[] = [
   {
     icon: Workflow,
     label: "01",
@@ -34,6 +42,7 @@ const services = [
     description:
       "Design preparation, project-based prototyping, and custom prints for reviewed, non-safety-critical applications.",
     outcomes: ["Prepared models", "Prototype iterations", "Request-based prints"],
+    link: { href: "/printing/", label: "Equipment and materials" },
   },
 ];
 
@@ -79,39 +88,8 @@ const principles = [
 export default function Home() {
   return (
     <>
-      <a className="skip-link" href="#main-content">
-        Skip to main content
-      </a>
-
-      <header className="site-header">
-        <div className="header-inner">
-          <a className="brand-link" href="#top" aria-label="AP3X Operations LLC — home">
-            <Image
-              className="brand-logo"
-              src="/brand/ap3x-logo-horizontal-reversed.webp"
-              alt=""
-              width={800}
-              height={220}
-              priority
-            />
-          </a>
-
-          <nav className="primary-nav" aria-label="Primary navigation">
-            <a href="#services">Services</a>
-            <a href="#process">How we work</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-          </nav>
-
-          <a
-            className="header-contact"
-            href="mailto:sebastien@ap3xoperations.com?subject=AP3X%20project%20inquiry"
-          >
-            Discuss a project
-            <ArrowRight size={16} aria-hidden="true" />
-          </a>
-        </div>
-      </header>
+      <SkipLink />
+      <SiteHeader />
 
       <main id="main-content">
         <section className="hero" id="top" aria-labelledby="hero-heading">
@@ -152,7 +130,7 @@ export default function Home() {
               <div className="hero-actions">
                 <a
                   className="button button-primary"
-                  href="mailto:sebastien@ap3xoperations.com?subject=AP3X%20project%20inquiry"
+                  href={inquiryHref}
                 >
                   Discuss a project
                   <ArrowRight size={18} aria-hidden="true" />
@@ -204,6 +182,12 @@ export default function Home() {
                         </li>
                       ))}
                     </ul>
+                    {service.link ? (
+                      <a className="text-link card-link" href={service.link.href}>
+                        {service.link.label}
+                        <ArrowRight size={15} aria-hidden="true" />
+                      </a>
+                    ) : null}
                   </article>
                 );
               })}
@@ -248,6 +232,10 @@ export default function Home() {
                   delivered with care. That applies whether the project is a workflow,
                   a technology problem, or a physical part.
                 </p>
+                <a className="text-link" href="/about/">
+                  Background and experience
+                  <ArrowRight size={15} aria-hidden="true" />
+                </a>
               </div>
 
               <div className="principles-grid">
@@ -280,7 +268,7 @@ export default function Home() {
               <div className="contact-actions">
                 <a
                   className="button button-primary contact-button"
-                  href="mailto:sebastien@ap3xoperations.com?subject=AP3X%20project%20inquiry"
+                  href={inquiryHref}
                 >
                   <Mail size={18} aria-hidden="true" />
                   Start a conversation
@@ -294,24 +282,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="site-footer">
-        <div className="shell footer-inner">
-          <div className="footer-brand">
-            <Image
-              className="footer-logo"
-              src="/brand/ap3x-logo-horizontal-reversed.webp"
-              alt="AP3X Operations LLC"
-              width={800}
-              height={220}
-            />
-          </div>
-          <div className="footer-meta">
-            <a href="mailto:sebastien@ap3xoperations.com">sebastien@ap3xoperations.com</a>
-            <span>© 2026 AP3X Operations LLC</span>
-            <span>Based in Franklin, NY. Available for remote work anywhere.</span>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
 
     </>
   );
