@@ -1078,14 +1078,6 @@ a {
   grid-area: extra;
 }
 
-/* Desktop: the AMS HT shot runs as a 16:9 strip so both columns end close to level. */
-@media (min-width: 981px) {
-  .equipment-layout > .equipment-photo:not(.equipment-photo-main) img {
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    object-position: 50% 70%;
-  }
-}
 
 .equipment-photo {
   margin: 0;
@@ -1133,6 +1125,18 @@ a {
 
   .equipment-photo-main {
     max-width: 460px;
+  }
+}
+
+.detail-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+@media (max-width: 720px) {
+  .detail-gallery {
+    grid-template-columns: 1fr;
   }
 }
 

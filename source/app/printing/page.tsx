@@ -77,6 +77,24 @@ const projects: Project[] = [
   },
 ];
 
+const detailViews = [
+  {
+    src: "/work/helmet-front.webp",
+    label: "Front",
+    alt: "Small black 3D-printed sci-fi helmet model, front three-quarter view, showing visor and panel detail.",
+  },
+  {
+    src: "/work/helmet-top.webp",
+    label: "Top",
+    alt: "The same helmet model from above, showing raised panel lines and small rivet details.",
+  },
+  {
+    src: "/work/helmet-rear.webp",
+    label: "Rear",
+    alt: "The same helmet model from behind, showing ridged back panels.",
+  },
+];
+
 const steps = [
   {
     icon: Send,
@@ -185,7 +203,7 @@ export default function PrintingPage() {
                     src="/work/ams-ht.webp"
                     alt="Two Bambu Lab AMS HT units loaded with black and green filament, each showing humidity and temperature on its display."
                     width={900}
-                    height={790}
+                    height={506}
                     sizes="(max-width: 980px) 100vw, 640px"
                   />
                 </a>
@@ -267,6 +285,36 @@ export default function PrintingPage() {
                 </li>
               ))}
             </ol>
+          </div>
+        </section>
+
+        <section className="section process-section" aria-labelledby="detail-heading">
+          <div className="shell">
+            <div className="section-intro">
+              <p className="section-kicker">Detail up close</p>
+              <h2 id="detail-heading">Fine detail at small scale.</h2>
+              <p>
+                A small helmet model, shown from three angles. Panel lines, vents and
+                rivets come through cleanly even at miniature size.
+              </p>
+            </div>
+
+            <div className="detail-gallery">
+              {detailViews.map((view) => (
+                <figure className="equipment-photo" key={view.src}>
+                  <a href={view.src} aria-label={`View full photo: helmet model, ${view.label.toLowerCase()} view`}>
+                    <Image
+                      src={view.src}
+                      alt={view.alt}
+                      width={900}
+                      height={1125}
+                      sizes="(max-width: 720px) 100vw, 380px"
+                    />
+                  </a>
+                  <figcaption>{view.label}</figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
         </section>
 

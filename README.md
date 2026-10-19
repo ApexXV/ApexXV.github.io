@@ -56,6 +56,17 @@ cd source && npm run serve     # http://127.0.0.1:4173
   with `python3 scripts/brand-assets.py brand-artwork public` (needs Pillow),
   then build and publish as above.
 
+## Photos
+
+- `photo-masters/`: the edited photos (color-corrected, cropped, house keys
+  blurred), without the logo. Keep originals with personal details out of the
+  repo; it is public.
+- `scripts/photo-assets.py`: builds `public/work/*.webp` from the masters and
+  stamps the AP3X logo in a clean corner. To add a photo, save an edited JPG in
+  `photo-masters/`, add a line to `JOBS` in the script, run
+  `python3 scripts/photo-assets.py` from `source/`, then reference the new file
+  in the page and build and publish as above.
+
 ## Brand colours
 
 Defined as CSS variables at the top of `app/globals.css`, based on the
