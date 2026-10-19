@@ -124,7 +124,8 @@ export default function PrintingPage() {
 
       <main id="main-content">
         <section className="page-hero" aria-labelledby="page-heading">
-          <div className="shell">
+          <div className="shell page-hero-grid">
+            <div>
             <p className="eyebrow">
               <span aria-hidden="true" />
               Additive manufacturing
@@ -135,6 +136,21 @@ export default function PrintingPage() {
               custom parts for reviewed, non-safety-critical uses. Small runs and one-off
               parts are the focus.
             </p>
+            </div>
+
+            <figure className="equipment-photo page-hero-photo">
+              <a href="/work/print-setup.webp" aria-label="View full photo: the AP3X print setup">
+                <Image
+                  src="/work/print-setup.webp"
+                  alt="The AP3X print setup: a Bambu Lab X1 Carbon with an AMS on top, and a second AMS and two AMS HT units on the shelf above."
+                  width={900}
+                  height={1234}
+                  sizes="(max-width: 980px) 100vw, 440px"
+                  priority
+                />
+              </a>
+              <figcaption>The full setup: X1 Carbon, two AMS units and two AMS HT dryers.</figcaption>
+            </figure>
           </div>
         </section>
 
@@ -150,19 +166,6 @@ export default function PrintingPage() {
             </div>
 
             <div className="equipment-layout">
-              <figure className="equipment-photo equipment-photo-main">
-                <a href="/work/x1c-ams.webp" aria-label="View full photo: Bambu Lab X1 Carbon with AMS">
-                  <Image
-                    src="/work/x1c-ams.webp"
-                    alt="Bambu Lab X1 Carbon printer with an AMS multi-material unit mounted on top."
-                    width={900}
-                    height={1407}
-                    sizes="(max-width: 980px) 100vw, 420px"
-                  />
-                </a>
-                <figcaption>The X1 Carbon with its AMS on top.</figcaption>
-              </figure>
-
             <div className="spec-panel">
               <div className="spec-panel-title">
                 <span className="icon-box">
@@ -180,7 +183,7 @@ export default function PrintingPage() {
                 </div>
                 <div>
                   <dt>Materials</dt>
-                  <dd>PLA, PLA Matte, PETG, PETG-CF, TPU, ASA</dd>
+                  <dd>PLA, PLA Matte, PETG, PETG‑CF, TPU, ASA</dd>
                 </div>
                 <div>
                   <dt>Multicolor</dt>
@@ -188,7 +191,7 @@ export default function PrintingPage() {
                 </div>
                 <div>
                   <dt>Filament handling</dt>
-                  <dd>AMS plus two AMS HT units with drying</dd>
+                  <dd>Two AMS units plus two AMS HT dryers</dd>
                 </div>
                 <div>
                   <dt>Slicer</dt>
@@ -204,7 +207,7 @@ export default function PrintingPage() {
                     alt="Two Bambu Lab AMS HT units loaded with black and green filament, each showing humidity and temperature on its display."
                     width={900}
                     height={506}
-                    sizes="(max-width: 980px) 100vw, 640px"
+                    sizes="(max-width: 980px) 100vw, 560px"
                   />
                 </a>
                 <figcaption>
