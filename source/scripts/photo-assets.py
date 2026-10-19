@@ -74,6 +74,8 @@ JOBS = {
     # 16:9, bottom-aligned so the logo sits below the units' own labels.
     "ams-ht": ("ams-ht.jpg", (0, 413, 1310, 1150), 900, "bottom-right", "white"),
     # The helmet gallery uses one corner and one logo colour across all three views.
+    # Full setup for the 3D printing page header; logo covers the bedding at bottom right.
+    "print-setup": ("print-setup.jpg", None, 900, "bottom-right", "white"),
     "helmet-front": ("helmet-front.jpg", None, 900, "top-right", "white"),
     "helmet-top": ("helmet-top.jpg", None, 900, "top-right", "white"),
     "helmet-rear": ("helmet-rear.jpg", None, 900, "top-right", "white"),
