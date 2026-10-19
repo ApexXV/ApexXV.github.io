@@ -1081,10 +1081,16 @@ a {
 
 .equipment-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  grid-template-areas: "spec extra";
-  gap: 28px;
-  align-items: center;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1fr);
+  grid-template-areas:
+    "photo spec"
+    "photo extra";
+  gap: 22px 28px;
+  align-items: start;
+}
+
+.equipment-photo-main {
+  grid-area: photo;
 }
 
 .equipment-layout .spec-panel {
@@ -1137,8 +1143,13 @@ a {
   .equipment-layout {
     grid-template-columns: 1fr;
     grid-template-areas:
+      "photo"
       "spec"
       "extra";
+  }
+
+  .equipment-photo-main {
+    max-width: 460px;
   }
 }
 

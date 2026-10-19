@@ -166,6 +166,19 @@ export default function PrintingPage() {
             </div>
 
             <div className="equipment-layout">
+              <figure className="equipment-photo equipment-photo-main">
+                <a href="/work/x1c-ams.webp" aria-label="View full photo: Bambu Lab X1 Carbon with AMS">
+                  <Image
+                    src="/work/x1c-ams.webp"
+                    alt="Bambu Lab X1 Carbon printer with an AMS multi-material unit mounted on top."
+                    width={900}
+                    height={1407}
+                    sizes="(max-width: 980px) 100vw, 420px"
+                  />
+                </a>
+                <figcaption>The X1 Carbon with its AMS on top.</figcaption>
+              </figure>
+
             <div className="spec-panel">
               <div className="spec-panel-title">
                 <span className="icon-box">
@@ -207,7 +220,7 @@ export default function PrintingPage() {
                     alt="Two Bambu Lab AMS HT units loaded with black and green filament, each showing humidity and temperature on its display."
                     width={900}
                     height={506}
-                    sizes="(max-width: 980px) 100vw, 560px"
+                    sizes="(max-width: 980px) 100vw, 640px"
                   />
                 </a>
                 <figcaption>

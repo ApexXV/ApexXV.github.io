@@ -70,6 +70,7 @@ JOBS = {
     "key-rack-thumb": ("key-rack.jpg", (0, 0, 880, 1100), 640),
     "batch-plate": ("batch-plate.jpg", None, 900),
     "batch-plate-thumb": ("batch-plate.jpg", (0, 44, 1050, 1356), 640),
+    "x1c-ams": ("x1c-ams.jpg", None, 900),
     # 16:9, bottom-aligned so the logo sits below the units' own labels.
     "ams-ht": ("ams-ht.jpg", (0, 413, 1310, 1150), 900, "bottom-right", "white"),
     # The helmet gallery uses one corner and one logo colour across all three views.
