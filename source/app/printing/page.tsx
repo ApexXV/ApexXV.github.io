@@ -6,7 +6,7 @@ export const metadata = pageMetadata({
   path: "/printing/",
   title: "3D Printing",
   description:
-    "Custom 3D-printed parts, prototypes and fixtures from AP3X Operations in Franklin, NY. Printed on a Bambu Lab X1 Carbon in PLA, PETG and carbon-fiber PETG.",
+    "Custom 3D-printed parts, prototypes and fixtures from AP3X Operations in Franklin, NY. Printed on a Bambu Lab X1 Carbon in PLA, PETG, PETG-CF, TPU and ASA, with multicolor AMS printing.",
 });
 
 const materials = [
@@ -16,14 +16,19 @@ const materials = [
     detail: "Full spectrum of colors in stock.",
   },
   {
-    name: "PETG",
-    use: "Tougher parts that need more impact and heat resistance than PLA.",
-    detail: "Translucent available.",
+    name: "PETG and PETG-CF",
+    use: "Tougher parts with more impact and heat resistance than PLA. Carbon-fiber PETG‑CF adds stiffness for brackets, mounts and jigs.",
+    detail: "Translucent PETG available.",
   },
   {
-    name: "PETG-CF",
-    use: "Carbon-fiber-filled PETG for stiff, rigid parts such as brackets, mounts and jigs, with a matte textured finish.",
-    detail: "For parts that must not flex.",
+    name: "TPU",
+    use: "Flexible parts such as grips, bumpers, covers and protective pieces.",
+    detail: "AMS-compatible grades for multi-material parts.",
+  },
+  {
+    name: "ASA",
+    use: "Outdoor and sun-exposed parts. Resists UV and weathering, and handles heat better than PLA or PETG.",
+    detail: "Printed in the enclosed X1 Carbon.",
   },
 ];
 
@@ -111,11 +116,11 @@ export default function PrintingPage() {
                 </div>
                 <div>
                   <dt>Materials</dt>
-                  <dd>PLA, PLA Matte, PETG, PETG-CF</dd>
+                  <dd>PLA, PLA Matte, PETG, PETG-CF, TPU, ASA</dd>
                 </div>
                 <div>
-                  <dt>Multi-color</dt>
-                  <dd>Yes, with multiple AMS units</dd>
+                  <dt>Multicolor</dt>
+                  <dd>AMS printing, up to 12 colors per profile</dd>
                 </div>
                 <div>
                   <dt>Slicer</dt>
@@ -137,7 +142,7 @@ export default function PrintingPage() {
               </p>
             </div>
 
-            <div className="service-grid">
+            <div className="service-grid material-grid">
               {materials.map((material) => (
                 <article className="service-card material-card" key={material.name}>
                   <div className="card-topline">

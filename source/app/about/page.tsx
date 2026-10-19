@@ -34,8 +34,9 @@ const experience = [
   {
     years: "2022 – 2023",
     title: "Network Infrastructure Installer",
-    context: "Telecommunications",
-    description: "Installed network infrastructure for telecommunications projects.",
+    context: "Telecommunications and fiber optics",
+    description:
+      "Installed, tested and staged fiber-optic installations on telecommunications projects for AT&T and Verizon.",
   },
   {
     years: "2018 – 2020",
@@ -61,7 +62,7 @@ const toolGroups = [
   },
   {
     label: "Fabrication",
-    tools: ["Bambu Studio", "Bambu Lab X1 Carbon"],
+    tools: ["Bambu Studio", "Bambu Lab X1 Carbon", "AMS multicolor"],
   },
 ];
 
