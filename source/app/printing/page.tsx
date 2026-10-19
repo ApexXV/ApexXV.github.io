@@ -1,4 +1,5 @@
 import { Ban, CheckCircle2, FileInput, Layers, Printer, ScanSearch, Send } from "lucide-react";
+import Image from "next/image";
 import { pageMetadata } from "../_components/page-metadata";
 import { ContactPanel, SiteFooter, SiteHeader, SkipLink } from "../_components/site-chrome";
 
@@ -32,16 +33,37 @@ const materials = [
   },
 ];
 
-const projects = [
+type Project = {
+  title: string;
+  description: string;
+  photo?: { thumb: string; full: string; alt: string };
+};
+
+const projects: Project[] = [
+  {
+    title: "Home lab equipment rack",
+    description:
+      "A custom 3D-printed rack system for a home lab. It holds a four-bay drive enclosure, a cluster of single-board computers, a network switch and supporting hardware, in a printed frame sized to the equipment.",
+    photo: {
+      thumb: "/work/homelab-rack-thumb.webp",
+      full: "/work/homelab-rack.webp",
+      alt: "Black 3D-printed equipment rack holding a four-bay drive enclosure, three networked single-board computers and a network switch.",
+    },
+  },
+  {
+    title: "Wall key rack with shelf",
+    description:
+      "A wall-mounted key rack with a shelf above for mail and small items, and a row of hooks below so everyday keys have a fixed place.",
+    photo: {
+      thumb: "/work/key-rack-thumb.webp",
+      full: "/work/key-rack.webp",
+      alt: "White 3D-printed wall key rack with five black hooks and a shelf, holding several sets of keys.",
+    },
+  },
   {
     title: "Fleet key tag system",
     description:
-      "Twelve custom key tags, each holding three keys, plus a wall-mounted rack to hang them on. Designed so every set has a fixed, labelled place. About 9¾ hours of total print time.",
-  },
-  {
-    title: "Equipment rack",
-    description:
-      "A custom-printed rack system for organizing network and infrastructure equipment, sized to the hardware it holds.",
+      "Twelve custom key tags, each holding three keys, plus a wall-mounted rack to hang them on. Designed so every set has a fixed, labeled place. About 9¾ hours of total print time.",
   },
 ];
 
@@ -182,6 +204,20 @@ export default function PrintingPage() {
                   <div>
                     <h3>{project.title}</h3>
                     <p>{project.description}</p>
+                    {project.photo ? (
+                      <figure className="project-figure">
+                        <a href={project.photo.full} aria-label={`View full photo: ${project.title}`}>
+                          <Image
+                            src={project.photo.thumb}
+                            alt={project.photo.alt}
+                            width={640}
+                            height={800}
+                            sizes="(max-width: 720px) 100vw, 340px"
+                          />
+                        </a>
+                        <figcaption>Select the photo to view it full size.</figcaption>
+                      </figure>
+                    ) : null}
                   </div>
                 </li>
               ))}
