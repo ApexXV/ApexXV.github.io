@@ -110,6 +110,12 @@ export function ContactForm({ defaultTopic }: { defaultTopic?: string }) {
       <input type="hidden" name="_subject" value="Website inquiry" />
       <input type="hidden" name="_captcha" value="false" />
 
+      <p className="form-privacy">
+        Please don&apos;t include confidential designs, account numbers or payment details.
+        Messages are relayed to AP3X by FormSubmit, a third-party form service, and used only to
+        reply to you. For anything sensitive, ask for a direct email first.
+      </p>
+
       <button type="submit" className="button button-primary contact-button" disabled={status === "sending"}>
         {status === "sending" ? (
           <>

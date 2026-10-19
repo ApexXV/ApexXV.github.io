@@ -73,19 +73,3 @@ JOBS = {
     "x1c-ams": ("x1c-ams.jpg", None, 900),
     # 16:9, bottom-aligned so the logo sits below the units' own labels.
     "ams-ht": ("ams-ht.jpg", (0, 413, 1310, 1150), 900, "bottom-right", "white"),
-    # The helmet gallery uses one corner and one logo colour across all three views.
-    # Full setup for the 3D printing page header; logo covers the bedding at bottom right.
-    "print-setup": ("print-setup.jpg", None, 900, "bottom-right", "white"),
-    "helmet-front": ("helmet-front.jpg", None, 900, "top-right", "white"),
-    "helmet-top": ("helmet-top.jpg", None, 900, "top-right", "white"),
-    "helmet-rear": ("helmet-rear.jpg", None, 900, "top-right", "white"),
-}
-
-for name, (src, crop, width, *forced) in JOBS.items():
-    img = Image.open(masters / src).convert("RGB")
-    if crop:
-        img = img.crop(crop)
-    img = fit_width(img, width)
-    stamped, corner, variant, lum = stamp(img, *forced)
-    stamped.save(out / f"{name}.webp", quality=82, method=6)
-    print(f"{name}.webp {stamped.size[0]}x{stamped.size[1]} logo={variant} {corner} (bg {lum})")
