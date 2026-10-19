@@ -97,8 +97,8 @@ const timelapses: Timelapse[] = [
   },
   {
     name: "knurled-ring",
-    title: "Knurled ring",
-    caption: "A ring with a diamond knurl pattern around its outer wall.",
+    title: "Custom threaded container cap",
+    caption: "A custom 3D-printed screw cap with a diamond knurled grip, made to fit a specific container.",
   },
 ];
 
