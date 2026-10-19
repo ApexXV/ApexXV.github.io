@@ -85,13 +85,11 @@ export function ContactPanel({
   kicker,
   heading,
   body,
-  subject,
   defaultTopic,
 }: {
   kicker: string;
   heading: string;
   body: string;
-  subject: string;
   defaultTopic?: string;
 }) {
   return (
@@ -103,7 +101,7 @@ export function ContactPanel({
             <h2 id="contact-heading">{heading}</h2>
             <p>{body}</p>
           </div>
-          <ContactForm subject={subject} defaultTopic={defaultTopic} />
+          <ContactForm defaultTopic={defaultTopic} />
         </div>
       </div>
     </section>

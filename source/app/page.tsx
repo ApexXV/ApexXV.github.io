@@ -257,7 +257,6 @@ export default function Home() {
           kicker="Start a conversation"
           heading="Tell us what you are working on."
           body="Share the problem, the desired outcome, and your timing. AP3X will respond with the next practical step."
-          subject="AP3X project inquiry"
         />
       </main>
 

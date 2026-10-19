@@ -12,7 +12,7 @@ const topics = ["Business operations", "Technology support", "3D printing", "Som
 
 type Status = "idle" | "sending" | "sent" | "error";
 
-export function ContactForm({ defaultTopic, subject }: { defaultTopic?: string; subject: string }) {
+export function ContactForm({ defaultTopic }: { defaultTopic?: string }) {
   const [status, setStatus] = useState<Status>("idle");
   const [copied, setCopied] = useState(false);
 
@@ -28,7 +28,7 @@ export function ContactForm({ defaultTopic, subject }: { defaultTopic?: string; 
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           ...data,
-          _subject: `${subject}: ${data.topic ?? ""}`.trim(),
+          _subject: `Website inquiry: ${data.topic ?? "General"}`,
           _template: "table",
         }),
       });
@@ -107,7 +107,7 @@ export function ContactForm({ defaultTopic, subject }: { defaultTopic?: string; 
 
       {/* Hidden from people; bots tend to fill it in. */}
       <input type="text" name="_honey" tabIndex={-1} autoComplete="off" className="form-honey" aria-hidden="true" />
-      <input type="hidden" name="_subject" value={subject} />
+      <input type="hidden" name="_subject" value="Website inquiry" />
       <input type="hidden" name="_captcha" value="false" />
 
       <button type="submit" className="button button-primary contact-button" disabled={status === "sending"}>
