@@ -1,0 +1,71 @@
+{
+  "business_name": "AP3X Operations LLC",
+  "package_date": "2026-10-19",
+  "date_timezone": "America/New_York",
+  "package_type": "Artwork handoff",
+  "source": "Original image-generation PNG outputs, copied without pixel modifications.",
+  "canonical_symbol": "logos/ap3x-symbol-navy-teal-transparent.png",
+  "intended_palette": {
+    "midnight": "#102936",
+    "teal": "#087E91",
+    "cyan": "#38BDCA",
+    "white": "#F5F7F6"
+  },
+  "palette_note": "Design-intent values; generated PNG pixels may contain antialiasing and tonal variation.",
+  "assets": [
+    {
+      "path": "logos/ap3x-symbol-navy-teal-transparent.png",
+      "description": "Standalone business emblem; primary symbol geometry reference.",
+      "mime_type": "image/png",
+      "width_px": 1254,
+      "height_px": 1254,
+      "color_mode": "RGBA",
+      "contains_transparency": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "bytes": 588940,
+      "sha256": "8d422dfabb9dede68ee96d561ca7072b25bb8d491134ce74370ca750b6610498"
+    },
+    {
+      "path": "logos/ap3x-logo-horizontal-navy-teal-transparent.png",
+      "description": "Horizontal symbol and company-name logo for light surfaces.",
+      "mime_type": "image/png",
+      "width_px": 1942,
+      "height_px": 809,
+      "color_mode": "RGBA",
+      "contains_transparency": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "bytes": 539698,
+      "sha256": "d63ac9afeedc5af046003c7176bae32c77a6f2e4070f0eb0b0e46d292e3ff578"
+    },
+    {
+      "path": "graphics/ap3x-banner-dark.png",
+      "description": "Wide dark business graphic with company name and website address.",
+      "mime_type": "image/png",
+      "width_px": 1983,
+      "height_px": 793,
+      "color_mode": "RGB",
+      "contains_transparency": false,
+      "alpha_range": null,
+      "bytes": 1270210,
+      "sha256": "7f8775cb4ea6009deb4ec9513e16914deae11ef3db5fdba2e2e93dc4f8bc52cd"
+    },
+    {
+      "path": "reference/ap3x-visual-identity-overview.png",
+      "description": "Reference sheet; not a collection of separate production exports.",
+      "mime_type": "image/png",
+      "width_px": 1536,
+      "height_px": 1024,
+      "color_mode": "RGB",
+      "contains_transparency": false,
+      "alpha_range": null,
+      "bytes": 1261805,
+      "sha256": "f73c0e1ceb0fb0ab5c52f55b33d68c3cf8b1843f1c2237d9c84b8ec2367966b9"
+    }
+  ]
+}

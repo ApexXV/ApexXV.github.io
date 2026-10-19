@@ -3,14 +3,15 @@
 @import "../vendor/shadcn-tailwind-4.13.0.css";
 
 :root {
-  --canvas: #03080d;
-  --surface: #07121b;
-  --surface-raised: #0b1821;
-  --text: #f3f8fb;
-  --muted: #8da5b5;
-  --cyan: #4cddea;
-  --green: #5be28a;
-  --divider: #234253;
+  /* AP3X brand palette: midnight #102936, teal #087e91, cyan #38bdca, white #f5f7f6 */
+  --canvas: #0a1d28;
+  --surface: #0e2532;
+  --surface-raised: #102936;
+  --text: #f5f7f6;
+  --muted: #93acb9;
+  --cyan: #38bdca;
+  --teal: #087e91;
+  --divider: #1f4456;
   --max-width: 1200px;
 }
 
@@ -81,8 +82,8 @@ a {
   position: fixed;
   inset: 0 0 auto;
   z-index: 50;
-  border-bottom: 1px solid rgba(35, 66, 83, 0.55);
-  background: rgba(3, 8, 13, 0.78);
+  border-bottom: 1px solid rgba(31, 68, 86, 0.55);
+  background: rgba(10, 29, 40, 0.78);
   -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
 }
@@ -104,26 +105,10 @@ a {
   align-items: center;
 }
 
-.brand-wordmark {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.42em;
-  color: var(--text);
-  font-family: "Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 23px;
-  letter-spacing: -0.035em;
-  line-height: 1;
-  white-space: nowrap;
-}
-
-.brand-wordmark strong {
-  color: var(--cyan);
-  font-weight: 700;
-  letter-spacing: -0.045em;
-}
-
-.brand-wordmark > span {
-  font-weight: 500;
+.brand-logo {
+  display: block;
+  width: auto;
+  height: 44px;
 }
 
 .primary-nav {
@@ -162,7 +147,7 @@ a {
   isolation: isolate;
   min-height: 820px;
   overflow: hidden;
-  border-bottom: 1px solid rgba(35, 66, 83, 0.5);
+  border-bottom: 1px solid rgba(31, 68, 86, 0.5);
   background: var(--canvas);
 }
 
@@ -177,19 +162,29 @@ a {
 .hero-background {
   z-index: -3;
   object-fit: cover;
-  object-position: 82% 50%;
-  filter: brightness(1.12) saturate(1.08);
+  object-position: 100% 50%;
 }
 
 .hero-background-portrait {
   display: none;
 }
 
+@media (max-width: 1180px) {
+  .hero-background-wide {
+    display: none;
+  }
+
+  .hero-background-portrait {
+    display: block;
+    object-position: 70% 50%;
+  }
+}
+
 .hero-overlay {
   z-index: -2;
   background:
-    linear-gradient(90deg, rgba(3, 8, 13, 0.66) 0%, rgba(3, 8, 13, 0.52) 34%, rgba(3, 8, 13, 0.18) 58%, transparent 76%),
-    radial-gradient(circle at 22% 35%, rgba(76, 221, 234, 0.08), transparent 36%);
+    linear-gradient(90deg, rgba(10, 29, 40, 0.5) 0%, rgba(10, 29, 40, 0.3) 30%, transparent 50%),
+    radial-gradient(circle at 22% 35%, rgba(56, 189, 202, 0.08), transparent 36%);
 }
 
 .hero::after {
@@ -234,7 +229,7 @@ a {
   width: 34px;
   height: 2px;
   border-radius: 999px;
-  background: var(--green);
+  background: linear-gradient(90deg, var(--teal), var(--cyan));
 }
 
 .hero h1 {
@@ -284,16 +279,16 @@ a {
 .button-primary {
   background: var(--cyan);
   color: var(--canvas);
-  box-shadow: 0 12px 36px rgba(76, 221, 234, 0.14);
+  box-shadow: 0 12px 36px rgba(56, 189, 202, 0.14);
 }
 
 .button-primary:hover {
-  background: #72e6f0;
+  background: #5fd0db;
 }
 
 .button-secondary {
   border-color: var(--divider);
-  background: rgba(7, 18, 27, 0.62);
+  background: rgba(14, 37, 50, 0.62);
   color: var(--text);
 }
 
@@ -324,7 +319,7 @@ a {
   height: 4px;
   margin-inline: 16px;
   border-radius: 50%;
-  background: var(--green);
+  background: var(--cyan);
   content: "";
 }
 
@@ -380,9 +375,9 @@ a {
   min-height: 400px;
   overflow: hidden;
   padding: 30px;
-  border: 1px solid rgba(35, 66, 83, 0.75);
+  border: 1px solid rgba(31, 68, 86, 0.75);
   border-radius: 18px;
-  background: linear-gradient(145deg, rgba(11, 24, 33, 0.96), rgba(7, 18, 27, 0.86));
+  background: linear-gradient(145deg, rgba(11, 24, 33, 0.96), rgba(14, 37, 50, 0.86));
   transition: transform 180ms ease, border-color 180ms ease;
 }
 
@@ -392,14 +387,14 @@ a {
   bottom: -104px;
   width: 210px;
   height: 210px;
-  border: 1px solid rgba(76, 221, 234, 0.12);
+  border: 1px solid rgba(56, 189, 202, 0.12);
   transform: rotate(45deg);
   content: "";
 }
 
 .service-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(76, 221, 234, 0.58);
+  border-color: rgba(56, 189, 202, 0.58);
 }
 
 .card-topline {
@@ -414,9 +409,9 @@ a {
   justify-content: center;
   width: 46px;
   height: 46px;
-  border: 1px solid rgba(76, 221, 234, 0.3);
+  border: 1px solid rgba(56, 189, 202, 0.3);
   border-radius: 12px;
-  background: rgba(76, 221, 234, 0.08);
+  background: rgba(56, 189, 202, 0.08);
   color: var(--cyan);
 }
 
@@ -457,11 +452,11 @@ a {
 }
 
 .service-card li svg {
-  color: var(--green);
+  color: var(--cyan);
 }
 
 .process-section {
-  border-block: 1px solid rgba(35, 66, 83, 0.5);
+  border-block: 1px solid rgba(31, 68, 86, 0.5);
   background: var(--surface);
 }
 
@@ -492,11 +487,11 @@ a {
   grid-template-columns: 66px 1fr;
   gap: 24px;
   padding: 34px 0;
-  border-top: 1px solid rgba(35, 66, 83, 0.78);
+  border-top: 1px solid rgba(31, 68, 86, 0.78);
 }
 
 .process-list li:last-child {
-  border-bottom: 1px solid rgba(35, 66, 83, 0.78);
+  border-bottom: 1px solid rgba(31, 68, 86, 0.78);
 }
 
 .step-number {
@@ -523,10 +518,10 @@ a {
   grid-template-columns: minmax(320px, 0.9fr) minmax(520px, 1.2fr);
   gap: 88px;
   padding: 64px;
-  border: 1px solid rgba(35, 66, 83, 0.76);
+  border: 1px solid rgba(31, 68, 86, 0.76);
   border-radius: 22px;
   background:
-    linear-gradient(135deg, rgba(76, 221, 234, 0.04), transparent 36%),
+    linear-gradient(135deg, rgba(56, 189, 202, 0.04), transparent 36%),
     var(--surface-raised);
 }
 
@@ -541,11 +536,11 @@ a {
 .principles-grid article {
   position: relative;
   padding: 25px 0 25px 48px;
-  border-top: 1px solid rgba(35, 66, 83, 0.78);
+  border-top: 1px solid rgba(31, 68, 86, 0.78);
 }
 
 .principles-grid article:last-child {
-  border-bottom: 1px solid rgba(35, 66, 83, 0.78);
+  border-bottom: 1px solid rgba(31, 68, 86, 0.78);
 }
 
 .principles-grid svg {
@@ -579,10 +574,10 @@ a {
   align-items: center;
   overflow: hidden;
   padding: 64px;
-  border: 1px solid rgba(76, 221, 234, 0.36);
+  border: 1px solid rgba(56, 189, 202, 0.36);
   border-radius: 22px;
   background:
-    linear-gradient(120deg, rgba(76, 221, 234, 0.08), rgba(91, 226, 138, 0.025) 62%),
+    linear-gradient(120deg, rgba(56, 189, 202, 0.08), rgba(56, 189, 202, 0.025) 62%),
     var(--surface);
 }
 
@@ -591,7 +586,7 @@ a {
   right: -90px;
   width: 290px;
   height: 290px;
-  border: 1px solid rgba(76, 221, 234, 0.12);
+  border: 1px solid rgba(56, 189, 202, 0.12);
   transform: rotate(45deg);
   content: "";
   pointer-events: none;
@@ -634,8 +629,8 @@ a {
 
 .site-footer {
   padding: 36px 0 48px;
-  border-top: 1px solid rgba(35, 66, 83, 0.5);
-  background: #02060a;
+  border-top: 1px solid rgba(31, 68, 86, 0.5);
+  background: #071720;
 }
 
 .footer-inner {
@@ -647,20 +642,13 @@ a {
 
 .footer-brand {
   display: flex;
-  align-items: baseline;
-  gap: 10px;
+  align-items: center;
 }
 
-.footer-brand .brand-wordmark {
-  font-size: 21px;
-}
-
-.legal-suffix {
-  color: var(--muted);
-  font-family: "Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+.footer-logo {
+  display: block;
+  width: auto;
+  height: 52px;
 }
 
 .footer-meta {
@@ -760,7 +748,7 @@ a {
   }
 
   .site-header {
-    background: rgba(3, 8, 13, 0.92);
+    background: rgba(10, 29, 40, 0.92);
   }
 
   .header-inner {
@@ -772,9 +760,8 @@ a {
     width: max-content;
   }
 
-  .brand-wordmark {
-    gap: 0.34em;
-    font-size: clamp(18px, 5.4vw, 21px);
+  .brand-logo {
+    height: 38px;
   }
 
   .header-contact {
@@ -810,13 +797,12 @@ a {
 
   .hero-background-portrait {
     object-position: 52% 50%;
-    filter: brightness(1.08) saturate(1.06);
   }
 
   .hero-overlay {
     background:
-      linear-gradient(180deg, rgba(3, 8, 13, 0.52) 0%, rgba(3, 8, 13, 0.38) 52%, rgba(3, 8, 13, 0.2) 78%, rgba(3, 8, 13, 0.34) 100%),
-      linear-gradient(90deg, rgba(3, 8, 13, 0.34) 0%, rgba(3, 8, 13, 0.16) 74%, transparent 100%);
+      linear-gradient(180deg, rgba(10, 29, 40, 0.52) 0%, rgba(10, 29, 40, 0.38) 52%, rgba(10, 29, 40, 0.2) 78%, rgba(10, 29, 40, 0.34) 100%),
+      linear-gradient(90deg, rgba(10, 29, 40, 0.34) 0%, rgba(10, 29, 40, 0.16) 74%, transparent 100%);
   }
 
   .hero::after {
@@ -877,7 +863,7 @@ a {
     height: 5px;
     margin-right: 10px;
     border-radius: 50%;
-    background: var(--green);
+    background: var(--cyan);
     content: "";
   }
 

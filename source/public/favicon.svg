@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
-  <title id="title">AP3X Operations</title>
-  <desc id="desc">AP3X set in clean cyan type on a near-black background.</desc>
-  <rect x="2" y="2" width="60" height="60" rx="12" fill="#03080D"/>
-  <text x="32" y="38" fill="#4CDDEA" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="-0.7" text-anchor="middle">AP3X</text>
-</svg>

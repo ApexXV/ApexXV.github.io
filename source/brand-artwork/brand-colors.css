@@ -1,0 +1,8 @@
+/* AP3X Operations LLC: intended colour tokens, 2026-10-19. */
+/* Optional variables only; no layout or global styling is applied. */
+:root {
+  --ap3x-midnight: #102936;
+  --ap3x-teal: #087e91;
+  --ap3x-cyan: #38bdca;
+  --ap3x-white: #f5f7f6;
+}

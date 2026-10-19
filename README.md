@@ -47,6 +47,21 @@ cd source && npm run serve     # http://127.0.0.1:4173
   Apps Script URL in the browser only. Nothing private is in this repo.
 - `public/`: images, icons, manifests, `robots.txt`, `sitemap.xml` and the
   social preview image `og-image.jpg`.
+- `public/brand/`: web logo files. The reversed horizontal logo is used in
+  the header and footer.
+- `brand-artwork/`: the original AP3X artwork package of 2026-10-19 with its
+  own README and palette. These are the masters; they are not served as-is.
+- `scripts/brand-assets.py`: regenerates the logos, favicons, touch icon,
+  social image and hero art from `brand-artwork/`. Run it from `source/`
+  with `python3 scripts/brand-assets.py brand-artwork public` (needs Pillow),
+  then build and publish as above.
+
+## Brand colours
+
+Defined as CSS variables at the top of `app/globals.css`, based on the
+artwork package: midnight `#102936`, teal `#087e91`, cyan `#38bdca` and
+off-white `#f5f7f6`. The page background is a slightly deeper midnight,
+`#0a1d28`.
 
 ## Rules
 

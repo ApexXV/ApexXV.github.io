@@ -86,10 +86,14 @@ export default function Home() {
       <header className="site-header">
         <div className="header-inner">
           <a className="brand-link" href="#top" aria-label="AP3X Operations LLC — home">
-            <span className="brand-wordmark" aria-hidden="true">
-              <strong>AP3X</strong>
-              <span>Operations</span>
-            </span>
+            <Image
+              className="brand-logo"
+              src="/brand/ap3x-logo-horizontal-reversed.webp"
+              alt=""
+              width={800}
+              height={220}
+              priority
+            />
           </a>
 
           <nav className="primary-nav" aria-label="Primary navigation">
@@ -292,12 +296,14 @@ export default function Home() {
 
       <footer className="site-footer">
         <div className="shell footer-inner">
-          <div className="footer-brand" aria-label="AP3X Operations LLC">
-            <span className="brand-wordmark" aria-hidden="true">
-              <strong>AP3X</strong>
-              <span>Operations</span>
-            </span>
-            <span className="legal-suffix">LLC</span>
+          <div className="footer-brand">
+            <Image
+              className="footer-logo"
+              src="/brand/ap3x-logo-horizontal-reversed.webp"
+              alt="AP3X Operations LLC"
+              width={800}
+              height={220}
+            />
           </div>
           <div className="footer-meta">
             <a href="mailto:sebastien@ap3xoperations.com">sebastien@ap3xoperations.com</a>

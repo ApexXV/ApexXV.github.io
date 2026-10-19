@@ -19,9 +19,12 @@ for (const html of [home, deductions]) {
     assert(info, `Missing exported local asset ${match[1]}`);
   }
 }
-for (const name of await readdir(path.join(root, "public"))) {
+for (const entry of await readdir(path.join(root, "public"), { recursive: true, withFileTypes: true })) {
+  if (!entry.isFile()) continue;
+  const name = path.relative(path.join(root, "public"), path.join(entry.parentPath, entry.name));
   const original = await readFile(path.join(root, "public", name));
-  const exported = await readFile(path.join(out, name));
+  const exported = await readFile(path.join(out, name)).catch(() => null);
+  assert(exported, `Asset missing from export: ${name}`);
   assert(original.equals(exported), `Asset changed: ${name}`);
 }
 console.log("PASS: both route HTML files, canonical metadata, homepage copy, navigation targets, local assets, noindex, manifests, and byte-identical public assets.");

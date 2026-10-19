@@ -14,8 +14,12 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   icons: {
-    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
-    shortcut: "/favicon.svg",
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   manifest: "/site.webmanifest",
@@ -32,7 +36,7 @@ export const metadata: Metadata = {
         type: "image/jpeg",
         width: 1200,
         height: 630,
-        alt: "AP3X Operations: practical support for work that needs to move.",
+        alt: "AP3X Operations LLC logo and ap3xoperations.com on a dark navy banner.",
       },
     ],
   },
@@ -50,7 +54,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   colorScheme: "dark",
-  themeColor: "#03080D",
+  themeColor: "#0A1D28",
 };
 
 // Structured data for search engines: a local service business with remote reach.
@@ -60,7 +64,7 @@ const businessJsonLd = {
   "@id": `${siteUrl}/#business`,
   name: "AP3X Operations LLC",
   url: `${siteUrl}/`,
-  logo: `${siteUrl}/apple-touch-icon.png`,
+  logo: `${siteUrl}/brand/ap3x-symbol.png`,
   image: `${siteUrl}/og-image.jpg`,
   description: siteDescription,
   email: "sebastien@ap3xoperations.com",
