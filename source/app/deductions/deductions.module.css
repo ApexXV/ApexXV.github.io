@@ -1,0 +1,210 @@
+.loading,
+.setup,
+.shell {
+  min-height: 100svh;
+  min-height: 100dvh;
+  background: #0b0913;
+  color: #f7f4fc;
+  color-scheme: dark;
+}
+
+.loading {
+  display: grid;
+  place-items: center;
+  padding: env(safe-area-inset-top) 24px env(safe-area-inset-bottom);
+}
+
+.loadingMark {
+  color: #e7c66f;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+}
+
+.setup {
+  display: grid;
+  place-items: center;
+  padding:
+    calc(28px + env(safe-area-inset-top))
+    max(20px, env(safe-area-inset-right))
+    calc(28px + env(safe-area-inset-bottom))
+    max(20px, env(safe-area-inset-left));
+}
+
+.setupCard {
+  width: min(100%, 520px);
+  padding: 30px;
+  border: 1px solid #443661;
+  border-radius: 28px;
+  background: #141022;
+  box-shadow: 0 24px 90px rgb(0 0 0 / 38%);
+}
+
+.eyebrow {
+  margin: 0 0 20px;
+  color: #e7c66f;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.iconFrame {
+  width: 78px;
+  height: 78px;
+  margin-bottom: 22px;
+  overflow: hidden;
+  border: 1px solid #675291;
+  border-radius: 20px;
+  box-shadow: 0 12px 36px rgb(0 0 0 / 34%);
+}
+
+.iconFrame img {
+  width: 100%;
+  height: 100%;
+}
+
+.setupCard h1 {
+  margin: 0;
+  font-size: clamp(2rem, 9vw, 3rem);
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.intro {
+  margin: 18px 0 26px;
+  color: #c8bfd7;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.form {
+  display: grid;
+  gap: 10px;
+}
+
+.form label {
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.form input {
+  width: 100%;
+  min-height: 52px;
+  padding: 0 14px;
+  border: 1px solid #55436f;
+  border-radius: 13px;
+  outline: none;
+  background: #0b0913;
+  color: #f7f4fc;
+  font: inherit;
+}
+
+.form input:focus {
+  border-color: #e7c66f;
+  box-shadow: 0 0 0 3px rgb(231 198 111 / 17%);
+}
+
+.form input[aria-invalid="true"] {
+  border-color: #f28b82;
+}
+
+.help,
+.error {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.help {
+  color: #a99fba;
+}
+
+.error {
+  color: #ffb4ab;
+}
+
+.form button,
+.cancel {
+  min-height: 52px;
+  border-radius: 14px;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.form button {
+  margin-top: 8px;
+  border: 1px solid #efd788;
+  background: linear-gradient(135deg, #f5dc8b, #dfbc60);
+  color: #17110a;
+}
+
+.cancel {
+  width: 100%;
+  margin-top: 12px;
+  border: 1px solid #55436f;
+  background: transparent;
+  color: #ddd5e9;
+}
+
+.securityNote {
+  margin: 22px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid #332844;
+  color: #9f95b0;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.shell {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+.appFrame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #0b0913;
+}
+
+.settingsLink {
+  position: fixed;
+  z-index: 20;
+  top: max(7px, env(safe-area-inset-top));
+  right: max(7px, env(safe-area-inset-right));
+  display: grid;
+  width: 36px;
+  height: 28px;
+  place-items: center;
+  border: 1px solid rgb(231 198 111 / 18%);
+  border-radius: 999px;
+  background: rgb(11 9 19 / 72%);
+  color: rgb(231 198 111 / 72%);
+  font-size: 12px;
+  letter-spacing: 1px;
+  opacity: 0.3;
+  transition: opacity 160ms ease;
+}
+
+.settingsLink:hover,
+.settingsLink:focus-visible {
+  opacity: 1;
+}
+
+@media (max-width: 520px) {
+  .setupCard {
+    padding: 24px 20px;
+    border-radius: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .settingsLink {
+    transition: none;
+  }
+}
