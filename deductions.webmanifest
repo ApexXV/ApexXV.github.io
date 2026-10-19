@@ -1,0 +1,25 @@
+{
+  "name": "AP3X Deductions",
+  "short_name": "Deductions",
+  "description": "Owner-only AP3X mileage and expense intake.",
+  "id": "/deductions",
+  "start_url": "/deductions",
+  "scope": "/deductions",
+  "display": "standalone",
+  "background_color": "#0b0913",
+  "theme_color": "#0b0913",
+  "icons": [
+    {
+      "src": "/deductions-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/deductions-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
