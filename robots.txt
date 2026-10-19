@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /deductions/
+
+Sitemap: https://ap3xoperations.com/sitemap.xml
