@@ -3,13 +3,12 @@ import {
   Boxes,
   CheckCircle2,
   FileCheck2,
-  Mail,
   Settings2,
   Wrench,
   Workflow,
 } from "lucide-react";
 import Image from "next/image";
-import { SiteFooter, SiteHeader, SkipLink, inquiryHref } from "./_components/site-chrome";
+import { ContactPanel, SiteFooter, SiteHeader, SkipLink, inquiryHref } from "./_components/site-chrome";
 
 const services: {
   icon: typeof Workflow;
@@ -254,32 +253,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section contact-section" id="contact" aria-labelledby="contact-heading">
-          <div className="shell">
-            <div className="contact-panel">
-              <div>
-                <p className="section-kicker">Start a conversation</p>
-                <h2 id="contact-heading">Tell us what you are working on.</h2>
-                <p>
-                  Share the problem, the desired outcome, and your timing. AP3X will
-                  respond with the next practical step.
-                </p>
-              </div>
-              <div className="contact-actions">
-                <a
-                  className="button button-primary contact-button"
-                  href={inquiryHref}
-                >
-                  <Mail size={18} aria-hidden="true" />
-                  Start a conversation
-                </a>
-                <a className="contact-email" href="mailto:sebastien@ap3xoperations.com">
-                  sebastien@ap3xoperations.com
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+        <ContactPanel
+          kicker="Start a conversation"
+          heading="Tell us what you are working on."
+          body="Share the problem, the desired outcome, and your timing. AP3X will respond with the next practical step."
+          subject="AP3X project inquiry"
+        />
       </main>
 
       <SiteFooter />

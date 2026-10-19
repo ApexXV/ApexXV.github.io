@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { ContactForm } from "./contact-form";
 
 type NavKey = "services" | "printing" | "about" | "contact";
 
@@ -7,11 +8,11 @@ const navItems: { key: NavKey; href: string; label: string }[] = [
   { key: "services", href: "/#services", label: "Services" },
   { key: "printing", href: "/printing/", label: "3D printing" },
   { key: "about", href: "/about/", label: "About" },
-  { key: "contact", href: "/#contact", label: "Contact" },
+  { key: "contact", href: "#contact", label: "Contact" },
 ];
 
-export const inquiryHref =
-  "mailto:sebastien@ap3xoperations.com?subject=AP3X%20project%20inquiry";
+// Every "discuss a project" button scrolls to the contact form on the current page.
+export const inquiryHref = "#contact";
 
 export function SkipLink() {
   return (
@@ -85,13 +86,13 @@ export function ContactPanel({
   heading,
   body,
   subject,
-  buttonLabel,
+  defaultTopic,
 }: {
   kicker: string;
   heading: string;
   body: string;
   subject: string;
-  buttonLabel: string;
+  defaultTopic?: string;
 }) {
   return (
     <section className="section contact-section" id="contact" aria-labelledby="contact-heading">
@@ -102,18 +103,7 @@ export function ContactPanel({
             <h2 id="contact-heading">{heading}</h2>
             <p>{body}</p>
           </div>
-          <div className="contact-actions">
-            <a
-              className="button button-primary contact-button"
-              href={`mailto:sebastien@ap3xoperations.com?subject=${encodeURIComponent(subject)}`}
-            >
-              {buttonLabel}
-              <ArrowRight size={18} aria-hidden="true" />
-            </a>
-            <a className="contact-email" href="mailto:sebastien@ap3xoperations.com">
-              sebastien@ap3xoperations.com
-            </a>
-          </div>
+          <ContactForm subject={subject} defaultTopic={defaultTopic} />
         </div>
       </div>
     </section>

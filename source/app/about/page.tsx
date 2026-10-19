@@ -204,7 +204,6 @@ export default function AboutPage() {
           heading="Tell us what you are working on."
           body="Share the problem, the desired outcome, and your timing. AP3X will respond with the next practical step."
           subject="AP3X project inquiry"
-          buttonLabel="Start a conversation"
         />
       </main>
 
