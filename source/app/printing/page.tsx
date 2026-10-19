@@ -6,14 +6,14 @@ export const metadata = pageMetadata({
   path: "/printing/",
   title: "3D Printing",
   description:
-    "Custom 3D-printed parts, prototypes and fixtures from AP3X Operations in Franklin, NY. Printed on a Bambu Lab X1 Carbon in PLA, PETG and TPU.",
+    "Custom 3D-printed parts, prototypes and fixtures from AP3X Operations in Franklin, NY. Printed on a Bambu Lab X1 Carbon in PLA, PETG and carbon-fiber PETG.",
 });
 
 const materials = [
   {
     name: "PLA and PLA Matte",
-    use: "Everyday parts, organizers, fixtures, tags and signage. Clean finish and a wide color range.",
-    detail: "White, black, red and mixed colors in stock.",
+    use: "Everyday parts, organizers, fixtures, tags and signage. Clean finish in gloss or matte.",
+    detail: "Full spectrum of colors in stock.",
   },
   {
     name: "PETG",
@@ -21,9 +21,9 @@ const materials = [
     detail: "Translucent available.",
   },
   {
-    name: "TPU",
-    use: "Flexible parts such as grips, bumpers, covers and protective pieces.",
-    detail: "Two flexible grades.",
+    name: "PETG-CF",
+    use: "Carbon-fiber-filled PETG for stiff, rigid parts such as brackets, mounts and jigs, with a matte textured finish.",
+    detail: "For parts that must not flex.",
   },
 ];
 
@@ -111,11 +111,11 @@ export default function PrintingPage() {
                 </div>
                 <div>
                   <dt>Materials</dt>
-                  <dd>PLA, PETG, TPU</dd>
+                  <dd>PLA, PLA Matte, PETG, PETG-CF</dd>
                 </div>
                 <div>
                   <dt>Multi-color</dt>
-                  <dd>Yes, via automatic material system</dd>
+                  <dd>Yes, with multiple AMS units</dd>
                 </div>
                 <div>
                   <dt>Slicer</dt>
