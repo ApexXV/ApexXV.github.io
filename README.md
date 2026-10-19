@@ -81,3 +81,13 @@ off-white `#f5f7f6`. The page background is a slightly deeper midnight,
 - Keep `.nojekyll` and `CNAME` at the root.
 - Rebuild from `source/` rather than editing the exported HTML. React
   re-renders the page on load, so hand edits to the body are discarded.
+
+## Timelapse clips
+
+- `public/video/`: silent looping clips (H.264 MP4 plus VP9 WebM fallback) and
+  a WebP poster for each. They play only while on screen.
+- `scripts/video-assets.sh`: builds them from the printer's timelapse exports.
+  Originals stay out of the repo. Run from `source/` with
+  `bash scripts/video-assets.sh <folder with the .mp4 files>`, after adding the
+  clip to the `CLIPS` list (name, filename prefix, speed). Then add it to the
+  `timelapses` list in `app/printing/page.tsx`, and build and publish.

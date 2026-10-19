@@ -1,6 +1,7 @@
 import { Ban, CheckCircle2, FileInput, Layers, Printer, ScanSearch, Send } from "lucide-react";
 import Image from "next/image";
 import { pageMetadata } from "../_components/page-metadata";
+import { TimelapseGallery, type Timelapse } from "../_components/timelapse-gallery";
 import { ContactPanel, SiteFooter, SiteHeader, SkipLink } from "../_components/site-chrome";
 
 export const metadata = pageMetadata({
@@ -74,6 +75,29 @@ const projects: Project[] = [
     title: "Fleet key tag system",
     description:
       "Twelve custom key tags, each holding three keys, plus a wall-mounted rack to hang them on. Designed so every set has a fixed, labeled place. About 9¾ hours of total print time.",
+  },
+];
+
+const timelapses: Timelapse[] = [
+  {
+    name: "lattice-vase",
+    title: "Twisted lattice vase",
+    caption: "Open diagonal struts rising layer by layer around a lattice core.",
+  },
+  {
+    name: "batch-tiles",
+    title: "Batch of linked tiles",
+    caption: "A full plate of small white parts printed in one run.",
+  },
+  {
+    name: "enclosure-set",
+    title: "Multi-part set",
+    caption: "Several matching black parts laid out and printed together.",
+  },
+  {
+    name: "box-print",
+    title: "Box enclosure",
+    caption: "A boxy case taking shape from the base up in a single print.",
   },
 ];
 
@@ -301,6 +325,21 @@ export default function PrintingPage() {
                 </li>
               ))}
             </ol>
+          </div>
+        </section>
+
+        <section className="section" aria-labelledby="timelapse-heading">
+          <div className="shell">
+            <div className="section-intro">
+              <p className="section-kicker">Timelapses</p>
+              <h2 id="timelapse-heading">Watch the parts take shape.</h2>
+              <p>
+                Captured by the printer&apos;s own camera, one frame per layer, and sped
+                up. Each clip plays while it is on screen.
+              </p>
+            </div>
+
+            <TimelapseGallery clips={timelapses} />
           </div>
         </section>
 
