@@ -32,7 +32,7 @@ MARGIN=$(( WIDTH * 35 / 1000 ))
 
 # name | source filename prefix | speed factor | extra filter before retiming
 CLIPS=(
-  "lattice-vase|0934ac0b|2.6|null"
+  "knurled-ring|24778a5e|1.0|null"
   # Frames 6-14 are the printer's red laser-scan pass; drop them.
   "batch-tiles|226bfa9d|0.8|select='not(between(n\,6\,14))'"
   "enclosure-set|9bd47746|1.0|null"

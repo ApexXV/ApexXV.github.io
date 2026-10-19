@@ -62,13 +62,13 @@ const projects: Project[] = [
     },
   },
   {
-    title: "Batch run of small parts",
+    title: "Infinity cube fidget toys",
     description:
-      "A full build plate of small linked parts printed in a single run on the X1 Carbon. Laying out repeat parts as one batch keeps setup time and cost per part down.",
+      "Four sets of infinity cube fidget toys printed together on one plate. Laying out repeat parts as one batch keeps setup time and cost per part down.",
     photo: {
       thumb: "/work/batch-plate-thumb.webp",
       full: "/work/batch-plate.webp",
-      alt: "Inside the X1 Carbon: a black build plate holding rows of small white linked parts, with the toolhead parked above them.",
+      alt: "Inside the X1 Carbon: a black build plate holding rows of white infinity cube pieces, with the toolhead parked above them.",
     },
   },
   {
@@ -80,24 +80,25 @@ const projects: Project[] = [
 
 const timelapses: Timelapse[] = [
   {
-    name: "lattice-vase",
-    title: "Twisted lattice vase",
-    caption: "Open diagonal struts rising layer by layer around a lattice core.",
-  },
-  {
-    name: "batch-tiles",
-    title: "Batch of linked tiles",
-    caption: "A full plate of small white parts printed in one run.",
+    name: "box-print",
+    title: "Mobile radio car mount",
+    caption: "A custom mount that holds a mobile radio securely inside a vehicle.",
   },
   {
     name: "enclosure-set",
-    title: "Multi-part set",
-    caption: "Several matching black parts laid out and printed together.",
+    title: "Café ashtrays in PETG\u2011CF",
+    caption:
+      "Five ashtrays printed in one run for a café's outdoor smoking area, in carbon-fiber PETG\u2011CF for a tougher, outdoor-ready part.",
   },
   {
-    name: "box-print",
-    title: "Box enclosure",
-    caption: "A boxy case taking shape from the base up in a single print.",
+    name: "batch-tiles",
+    title: "Infinity cube fidget toys",
+    caption: "Four complete sets printed together on one plate.",
+  },
+  {
+    name: "knurled-ring",
+    title: "Knurled ring",
+    caption: "A ring with a diamond knurl pattern around its outer wall.",
   },
 ];
 
