@@ -653,10 +653,17 @@ a {
 
 .footer-meta {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 24px;
+  justify-content: flex-end;
+  gap: 8px 24px;
   color: var(--muted);
   font-size: 13px;
+}
+
+/* Wrap whole items onto a new row rather than breaking a line mid-item. */
+.footer-meta > * {
+  white-space: nowrap;
 }
 
 @media (max-width: 1120px) {
@@ -914,6 +921,10 @@ a {
   .footer-meta {
     gap: 10px;
     overflow-wrap: anywhere;
+  }
+
+  .footer-meta > * {
+    white-space: normal;
   }
 }
 

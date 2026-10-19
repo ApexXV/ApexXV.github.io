@@ -4,7 +4,7 @@ import "./globals.css";
 const siteUrl = "https://ap3xoperations.com";
 const siteTitle = "AP3X Operations LLC | Operations, Technology & 3D Printing";
 const siteDescription =
-  "Practical business operations, technology support, and 3D printing for small businesses and project teams. Based in Franklin, NY, working remotely anywhere.";
+  "Practical business operations, technology support, and 3D printing for small businesses and project teams. Based in Franklin, NY. Available for remote work anywhere.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

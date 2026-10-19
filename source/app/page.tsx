@@ -308,7 +308,7 @@ export default function Home() {
           <div className="footer-meta">
             <a href="mailto:sebastien@ap3xoperations.com">sebastien@ap3xoperations.com</a>
             <span>© 2026 AP3X Operations LLC</span>
-            <span>Franklin, NY · Remote anywhere</span>
+            <span>Based in Franklin, NY. Available for remote work anywhere.</span>
           </div>
         </div>
       </footer>
