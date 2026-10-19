@@ -61,6 +61,16 @@ const projects: Project[] = [
     },
   },
   {
+    title: "Batch run of small parts",
+    description:
+      "A full build plate of small linked parts printed in a single run on the X1 Carbon. Laying out repeat parts as one batch keeps setup time and cost per part down.",
+    photo: {
+      thumb: "/work/batch-plate-thumb.webp",
+      full: "/work/batch-plate.webp",
+      alt: "Inside the X1 Carbon: a black build plate holding rows of small white linked parts, with the toolhead parked above them.",
+    },
+  },
+  {
     title: "Fleet key tag system",
     description:
       "Twelve custom key tags, each holding three keys, plus a wall-mounted rack to hang them on. Designed so every set has a fixed, labeled place. About 9¾ hours of total print time.",
